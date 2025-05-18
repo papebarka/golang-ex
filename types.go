@@ -58,9 +58,15 @@ import "fmt"
 
 	fmt.Printf("User's name is %s\n", u.name)
 	fmt.Printf("User's email is %s\n", u.email)
+	fmt.Printf("Is admin? %t\n", u.is_admin)
+	fmt.Println()
  }
 
- func (u *user) change_priviliege(is_admin bool) (is_admin bool) {
+ func (u user) show_privilege(){
+	fmt.Printf("%s's new admin privilige: %t\n", u.name, u.is_admin)
+ }
+
+ func (u *user) change_privilege(is_admin bool) {
 	u.is_admin = is_admin
  }
 
@@ -76,9 +82,14 @@ import "fmt"
 
 	mohamed := user{"Mohamed","mohamed@email.com", 28, false}
 
-	fmt.Printf("User 1: %v\n", moussa)
+	//fmt.Printf("User 1: %v\n", moussa)
+	//fmt.Printf("User 2: %v\n", mohamed)
 
-	fmt.Printf("User 2: %v\n", mohamed)
+	moussa.notify()
+
+	mohamed.notify()
+	mohamed.change_privilege(true)
+	mohamed.show_privilege()
 
 	var price unitprice
 	price = 80000
