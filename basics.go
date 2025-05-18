@@ -60,8 +60,46 @@ func Slices() {
 	*/
 }
 
-func main() {
-	Arrays()
 
-	Slices()
+/*
+ * A map is a data structure that provides you with an unordered collection of key/value
+ * pairs.You store values into the map based on a key
+ *
+ * Maps are collections, and you can iterate over them just like you do with arrays and
+ * slices. But maps are unordered collections, and there’s no way to predict the order in
+ * which the key/value pairs will be returned. Even if you store your key/value pairs in
+ * the same order, every iteration over a map could return a different order. This is
+ * because a map is implemented using a hash table.
+ */
+func Maps() {
+
+	// Creating a map with make()
+	dict := make(map[string]int)
+
+	// Creating a map with map literal
+	country_code := map[string]int{"ML": 223, "CI" : 225, "SN": 221, "FR": 33, "TR": 90}
+
+	fmt.Printf("dict initial value is: %v\n", dict)
+
+	fmt.Printf("country_code initial value is: %v\n", country_code)
+
+	// Testing key existences
+
+	ci_code, exists := country_code["CI"]
+
+	if exists {
+		fmt.Printf("Ivory Coast Code is %d\n", ci_code)
+	}
+
+	// Passing a map between two functions doesn’t make a copy of the map. In fact, you can
+	// pass a map to a function and make changes to the map, and the changes will be
+	// reflected by all references to the map.
+}
+
+func main() {
+	//Arrays()
+
+	//Slices()
+
+	Maps()
 }
