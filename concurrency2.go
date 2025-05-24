@@ -14,6 +14,9 @@ func main() {
 	// Allocate 1 logical processor for the scheduler to use
 	runtime.GOMAXPROCS(1)
 
+	// Allocate a logical processor for every available core.
+	//runtime.GOMAXPROCS(runtime.NumCPU())
+
 
 	wg.Add(2)
 
