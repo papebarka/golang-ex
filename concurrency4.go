@@ -9,6 +9,8 @@ import (
 
 //Atomic functions provide low-level locking mechanisms for synchronizing access to
 // integers and pointers. We can use atomic functions to fix race conditions
+// Two other useful atomic functions are LoadInt64 and StoreInt64. These functions
+// provide a safe way to read and write to an integer value
 
 var (
 	// Variable incremented by all goroutines
