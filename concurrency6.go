@@ -14,24 +14,24 @@
  *
  */
 
- /*
-  * Creating a channel in Go requires the use of the built-in function make.
-  * We can create both buffered or unbuffered channels.
-  * The first argument to make requires the keyword chan and then the type of data the channel will allow to be exchanged.
-  * If you’re creating a buffered channel, then you specify the size of the channel’s buffer as the second argument.
-  * Sending a value or pointer into a channel requires the use of the <- operator
-  */
+/*
+ * Creating a channel in Go requires the use of the built-in function make.
+ * We can create both buffered or unbuffered channels.
+ * The first argument to make requires the keyword chan and then the type of data the channel will allow to be exchanged.
+ * If you’re creating a buffered channel, then you specify the size of the channel’s buffer as the second argument.
+ * Sending a value or pointer into a channel requires the use of the <- operator
+ */
 
-  // buffered := make(chan string, 10) - Buffered channel
-  // unbuffered := make(chan int) - Unbuffered channel
-  // Send a string thourgh the channel
-  // buffered <-"Gopher"
-  // Receive a string from the channel
-  // value := <-buffered
-
+// buffered := make(chan string, 10) - Buffered channel
+// unbuffered := make(chan int) - Unbuffered channel
+// Send a string thourgh the channel
+// buffered <-"Gopher"
+// Receive a string from the channel
+// value := <-buffered
 
 /* Unbuffered and buffered channels behave a bit differently. Understanding the differences
  * will help you determine when to prefer one over the other, so let’s look at
  * each type separately
  */
 
+package main
