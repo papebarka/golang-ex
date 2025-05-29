@@ -1,0 +1,1 @@
+ERROR: 2025/05/28 22:48:14.723215 D:/Development/Practice/Go/golang-ex/loggers.go:47: An Error Message from somewhere
